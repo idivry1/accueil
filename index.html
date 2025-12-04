@@ -1,0 +1,95 @@
+<!--
+Fichier: index.html
+But: modèle prêt à déployer sur GitHub Pages (site statique)
+Instructions rapides (en bref) :
+1) Option "username.github.io" (site utilisateur) : créez un dépôt nommé EXACTEMENT "<votre-username-github>.github.io". Poussez ce fichier dans la branche main ; le site sera disponible à https://<votre-username-github>.github.io
+2) Option "projet" : créez un dépôt quelconque. Activez GitHub Pages dans les settings et choisissez la branche (main ou gh-pages). Le site sera disponible à https://<votre-username-github>.github.io/<nom-du-repo>/
+Commandes git (exemple) :
+  git init
+  git add index.html
+  git commit -m "Site initial"
+  git branch -M main
+  git remote add origin https://github.com/<votre-username>/<votre-repo>.git
+  git push -u origin main
+-->
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Site de idivry1</title>
+  <meta name="description" content="Site statique déployé sur GitHub Pages" />
+  <style>
+    :root{--maxw:1000px;--accent:#0b74de}
+    *{box-sizing:border-box}
+    body{font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;line-height:1.5;margin:0;padding:0;color:#111}
+    .container{max-width:var(--maxw);margin:32px auto;padding:0 16px}
+    header{display:flex;align-items:center;justify-content:space-between}
+    h1{margin:.2rem 0}
+    nav a{margin-left:12px;text-decoration:none;color:var(--accent)}
+    main{margin-top:24px}
+    .hero{padding:28px;border-radius:12px;background:#f7f9fc}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;margin-top:18px}
+    .card{padding:16px;border-radius:10px;background:white;box-shadow:0 6px 18px rgba(20,30,60,.06)}
+    footer{margin:36px 0;color:#666;font-size:.9rem}
+    .btn{display:inline-block;padding:8px 14px;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+    @media (prefers-color-scheme: dark){body{color:#ddd;background:#0b1220} .hero{background:#071226} .card{background:#071226}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div>
+        <h1>Mon site GitHub Pages</h1>
+        <div>Site personnel de idivry1 — prêt à être personnalisé.</div>
+      </div>
+      <nav>
+        <a href="#">Accueil</a>
+        <a href="#about">À propos</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Bienvenue sur le site de idivry1 👋</h2>
+        <p>Ceci est une page statique minimaliste que vous pouvez héberger directement sur GitHub Pages. Remplacez le contenu, ajoutez des pages, ou connectez un générateur statique (Jekyll / Hugo / Eleventy) si vous le souhaitez.</p>
+        <p style="margin-top:12px"><a class="btn" href="#about">Personnaliser</a></p>
+      </section>
+
+      <section id="about" class="grid" aria-label="blocs">
+        <div class="card">
+          <h3>Personnaliser</h3>
+          <p>Éditez ce fichier index.html pour changer le texte. Ajoutez style.css ou d'autres pages (ex: about.html).</p>
+        </div>
+        <div class="card">
+          <h3>Domaines</h3>
+          <p>Pour utiliser un domaine perso (ex: monsite.com), ajoutez un fichier CNAME à la racine contenant votre domaine, puis configurez les DNS chez votre registrar.</p>
+        </div>
+        <div class="card">
+          <h3>Générateurs statiques</h3>
+          <p>Vous pouvez utiliser Jekyll (intégré à GitHub Pages) ou d'autres générateurs (Hugo, Eleventy). Ils nécessitent un workflow de build ou GitHub Actions.</p>
+        </div>
+      </section>
+
+      <section id="contact" style="margin-top:22px">
+        <div class="card">
+          <h3>Contact</h3>
+          <p>Remplacez par vos liens sociaux, email ou formulaire externe (ex: formspree).</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>Template minimal • Modifiez et déployez sur GitHub Pages</div>
+    </footer>
+  </div>
+  <!--
+  --- Astuces avancées ---
+  - Pour un site utilisateur (username.github.io) : nommez le repo exactement <username>.github.io
+  - Pour un site de projet : activez Pages dans Settings > Pages et choisissez la branche / dossier
+  - Pour automatiser les builds (ex: Hugo) : utilisez GitHub Actions pour builder et déployer sur gh-pages
+  - Pour ajouter un CNAME privé : ajoutez un fichier CNAME (une seule ligne avec votre domaine) à la racine du repo
+  -->
+</body>
+</html>
