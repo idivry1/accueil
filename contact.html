@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IdIvry</title>
+    <style>
+        /* Styles CSS pour la mise en page et l'animation */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav ul {
+            list-style-type: none;
+            display: flex;
+            padding: 0;
+        }
+        nav ul li {
+            margin-right: 10px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        .banner {
+            height: 200px;
+            background-image: url('banner.gif');
+            background-size: cover;
+            background-position: center;
+        }
+        .content {
+            padding: 10px;
+        }
+        .content > div {
+            margin-bottom: 20px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 5px;
+        }
+        
+        /* Styles spécifiques pour mobile */
+        @media (max-width: 767px) {
+            header h1 {
+                font-size: 18px;
+            }
+            nav ul li {
+                margin-right: 5px;
+            }
+            nav ul li a {
+                font-size: 14px;
+            }
+            .banner {
+                height: 150px;
+            }
+            .content > div {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>IdIvry</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="lecture.html">Lecture</a></li>
+                <li><a href="image.html">Image</a></li>
+                <li><a href="shopping.html">Shopping</a></li>
+                <li><a href="apropos.html">À propos</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="banner"></div>
+    <div class="content">
+        <div>
+            <h2>Colonne 1</h2>
+            <p>Éditez ce fichier index.html pour changer le texte. Ajoutez style.css ou d'autres pages (ex: about.html).</p>
+        </div>
+        <div>
+            <h2>Colonne 2</h2>
+            <p>Éditez ce fichier index.html pour changer le texte. Ajoutez style.css ou d'autres pages (ex: about.html).</p>
+        </div>
+        <div>
+            <h2>Colonne 3</h2>
+            <p>Éditez ce fichier index.html pour changer le texte. Ajoutez style.css ou d'autres pages (ex: about.html).</p>
+        </div>
+    </div>
+    <footer>
+        <a href="#">TikTok</a>
+        <a href="#">Instagram</a>
+        <a href="#">Snapchat</a>
+        <a href="#">Facebook</a>
+    </footer>
+</body>
+</html>
