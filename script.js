@@ -1,6 +1,3 @@
-
-// Ajoutez ici vos scripts JavaScript
-console.log('Script.js chargé avec succès !');
 document.getElementById('startButton').addEventListener('click', function() {
     const startTime = performance.now();
     const imageUrl = 'https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png'; // URL d'image pour tester
@@ -17,3 +14,4 @@ document.getElementById('startButton').addEventListener('click', function() {
             document.getElementById('result').classList.remove('hidden');
         });
 });
+
