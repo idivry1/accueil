@@ -3,15 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test de Vitesse Internet</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Recherche de Billets</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        input, select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px 15px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #218838;
+        }
+    </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Test de Vitesse Internet</h1>
-        <button id="startButton">Démarrer le test</button>
-        <div id="result" class="hidden"></div>
-    </div>
-    <script src="script.js"></script>
+    <h1>Recherche de Billets</h1>
+    
+    <form id="flightSearch">
+        <h2>Vols d'Avion</h2>
+        <label for="flightFrom">De :</label>
+        <input type="text" id="flightFrom" name="flightFrom" required>
+        
+        <label for="flightTo">À :</label>
+        <input type="text" id="flightTo" name="flightTo" required>
+        
+        <label for="flightDate">Date de départ :</label>
+        <input type="date" id="flightDate" name="flightDate" required>
+        
+        <button type="submit">Rechercher des Vols</button>
+    </form>
+
+    <form id="boatSearch">
+        <h2>Bateaux</h2>
+        <label for="boatFrom">De :</label>
+        <input type="text" id="boatFrom" name="boatFrom" required>
+        
+        <label for="boatTo">À :</label>
+        <input type="text" id="boatTo" name="boatTo" required>
+        
+        <label for="boatDate">Date de départ :</label>
+        <input type="date" id="boatDate" name="boatDate" required>
+        
+        <button type="submit">Rechercher des Bateaux</button>
+    </form>
+
+    <form id="hotelSearch">
+        <h2>Hôtels</h2>
+        <label for="hotelLocation">Lieu :</label>
+        <input type="text" id="hotelLocation" name="hotelLocation" required>
+        
+        <label for="checkInDate">Date d'arrivée :</label>
+        <input type="date" id="checkInDate" name="checkInDate" required>
+        
+        <label for="checkOutDate">Date de départ :</label>
+        <input type="date" id="checkOutDate" name="checkOutDate" required>
+        
+        <button type="submit">Rechercher des Hôtels</button>
+    </form>
 </body>
 </html>
