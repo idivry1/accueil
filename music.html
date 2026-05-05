@@ -1,1 +1,89 @@
 
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lecteur MP3</title>
+    <style>
+        body {
+            background-color: #e0f7e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        #player {
+            background-color: #4CAF50;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        button {
+            background-color: #ffffff;
+            border: none;
+            color: #4CAF50;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #f1f1f1;
+        }
+    </style>
+</head>
+<body>
+    <div id="player">
+        <audio id="audioPlayer" controls>
+            <source id="audioSource" src="" type="audio/mpeg">
+            Votre navigateur ne prend pas en charge l'élément audio.
+        </audio>
+        <div>
+            <button onclick="playAudio()">Lecture</button>
+            <button onclick="pauseAudio()">Pause</button>
+            <button onclick="stopAudio()">Arrêter</button>
+            <button onclick="shuffleAudio()">Aléatoire</button>
+        </div>
+    </div>
+
+    <script>
+        const audioFiles = [
+            'audio1.mp3',
+            'audio2.mp3',
+            'audio3.mp3'
+            // Ajoutez ici le chemin de vos fichiers MP3
+        ];
+
+        const audioPlayer = document.getElementById('audioPlayer');
+        const audioSource = document.getElementById('audioSource');
+
+        function playAudio() {
+            audioPlayer.play();
+        }
+
+        function pauseAudio() {
+            audioPlayer.pause();
+        }
+
+        function stopAudio() {
+            audioPlayer.pause();
+            audioPlayer.currentTime = 0;
+        }
+
+        function shuffleAudio() {
+            const randomIndex = Math.floor(Math.random() * audioFiles.length);
+            audioSource.src = audioFiles[randomIndex];
+            audioPlayer.load();
+            playAudio();
+        }
+
+        // Initialiser le lecteur avec le premier fichier audio
+        audioSource.src = audioFiles[0];
+        audioPlayer.load();
+    </script>
+</body>
+</html>
