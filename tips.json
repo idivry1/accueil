@@ -1,0 +1,90 @@
+[
+  {
+    "t": "Détartrer une bouilloire",
+    "c": "Maison",
+    "m": 30,
+    "s": [
+      "Remplissez la bouilloire à moitié d’eau et complétez avec autant de vinaigre blanc.",
+      "Portez à ébullition, puis laissez agir 30 minutes.",
+      "Videz, puis frottez les dépôts restants avec une éponge.",
+      "Faites bouillir de l’eau claire deux fois et jetez-la pour chasser l’odeur."
+    ]
+  },
+  {
+    "t": "Neutraliser les odeurs du frigo",
+    "c": "Maison",
+    "m": 10,
+    "s": [
+      "Videz le frigo et lavez les parois à l’eau tiède avec un peu de bicarbonate.",
+      "Séchez soigneusement.",
+      "Placez un petit bol de bicarbonate de soude à l’intérieur.",
+      "Remplacez-le chaque mois."
+    ]
+  },
+  {
+    "t": "Garder le pain frais plus longtemps",
+    "c": "Cuisine",
+    "m": 5,
+    "s": [
+      "Coupez le pain en tranches le jour de l’achat.",
+      "Mettez-les dans un sac de congélation en chassant l’air.",
+      "Congelez, puis sortez la quantité voulue.",
+      "Faites-les griller directement, sans décongeler."
+    ]
+  },
+  {
+    "t": "Conserver les herbes fraîches",
+    "c": "Cuisine",
+    "m": 5,
+    "s": [
+      "Coupez le bas des tiges de persil ou de coriandre.",
+      "Plongez-les dans un verre d’eau, comme un bouquet.",
+      "Couvrez d’un sac et placez au frigo ; changez l’eau tous les deux jours.",
+      "Le basilic préfère la température ambiante, toujours dans un verre d’eau."
+    ]
+  },
+  {
+    "t": "La règle des 24 heures avant d’acheter",
+    "c": "Argent",
+    "m": 1,
+    "s": [
+      "Pour un achat non essentiel, notez l’objet et son prix dans vos notes.",
+      "Attendez 24 heures avant de payer.",
+      "Demain, demandez-vous si vous le voulez encore.",
+      "Si oui, achetez l’esprit tranquille ; sinon, vous venez d’économiser."
+    ]
+  },
+  {
+    "t": "Traquer les abonnements oubliés",
+    "c": "Argent",
+    "m": 20,
+    "s": [
+      "Ouvrez vos relevés bancaires des trois derniers mois.",
+      "Repérez tous les prélèvements qui reviennent chaque mois.",
+      "Pour chacun, demandez-vous : l’ai-je utilisé récemment ?",
+      "Résiliez ceux dont vous ne vous servez pas."
+    ]
+  },
+  {
+    "t": "Sauvegarder ses photos avec la règle 3-2-1",
+    "c": "Numérique",
+    "m": 30,
+    "s": [
+      "Gardez 3 copies de vos fichiers importants.",
+      "Placez-les sur 2 supports différents (ordinateur et disque externe, par exemple).",
+      "Gardez 1 copie hors de chez vous, par exemple dans un cloud.",
+      "Une fois par an, vérifiez que vous pouvez rouvrir les copies."
+    ]
+  },
+  {
+    "t": "Protéger ses comptes en ligne",
+    "c": "Numérique",
+    "m": 15,
+    "s": [
+      "Installez un gestionnaire de mots de passe.",
+      "Changez d’abord les mots de passe de votre messagerie et de votre banque : longs et uniques.",
+      "Activez la double authentification sur ces comptes.",
+      "Ne réutilisez jamais un mot de passe d’un site à l’autre."
+    ]
+  }
+]
