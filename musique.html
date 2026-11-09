@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Musique · IdIvry</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">IdIvry</a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="musique.html" aria-current="page">Musique</a></li>
+        <li><a href="lecture.html">Lecture</a></li>
+        <li><a href="image.html">Images</a></li>
+        <li><a href="shopping.html">Shopping</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main class="page">
+  <div class="wrap">
+    <h1>Musique</h1>
+    <p class="sub">Votre sélection, en lecture ou en mode aléatoire.</p>
+    <div class="player">
+      <div class="now" id="now" aria-live="polite">Aucun morceau</div>
+      <audio id="audio" controls preload="none"></audio>
+      <div class="ctrl">
+        <button type="button" id="prev">Précédent</button>
+        <button type="button" id="play">Lecture</button>
+        <button type="button" id="next">Suivant</button>
+        <button type="button" id="shuffle">Aléatoire</button>
+      </div>
+      <p class="msg" id="msg" hidden>Fichier introuvable. Ajoutez vos MP3 à côté de musique.html et listez-les dans la variable « pistes ».</p>
+    </div>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> IdIvry</span>
+    <ul>
+      <li><a href="privacy.html">Confidentialité</a></li>
+      <li><a href="terms.html">Conditions d’utilisation</a></li>
+      <li><a href="#">TikTok</a></li>
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Snapchat</a></li>
+      <li><a href="#">Facebook</a></li>
+    </ul>
+  </div>
+</footer>
+<script>
+document.getElementById("yr").textContent = new Date().getFullYear();
+const pistes = ["audio1.mp3", "audio2.mp3", "audio3.mp3"]; // ajoutez vos fichiers MP3 ici
+let i = 0;
+const $ = id => document.getElementById(id);
+const audio = $("audio");
+function charger(n, lire) {
+  i = (n + pistes.length) % pistes.length;
+  audio.src = pistes[i];
+  $("now").textContent = pistes[i].replace(/\.mp3$/i, "");
+  $("msg").hidden = true;
+  if (lire) audio.play().catch(() => {});
+}
+$("play").addEventListener("click", () => {
+  if (!audio.src) charger(0, false);
+  audio.paused ? audio.play().catch(() => {}) : audio.pause();
+});
+audio.addEventListener("play",  () => $("play").textContent = "Pause");
+audio.addEventListener("pause", () => $("play").textContent = "Lecture");
+audio.addEventListener("ended", () => charger(i + 1, true));
+audio.addEventListener("error", () => { $("msg").hidden = false; });
+$("prev").addEventListener("click", () => charger(i - 1, true));
+$("next").addEventListener("click", () => charger(i + 1, true));
+$("shuffle").addEventListener("click", () => charger(Math.floor(Math.random() * pistes.length), true));
+charger(0, false);
+</script>
+</body>
+</html>
