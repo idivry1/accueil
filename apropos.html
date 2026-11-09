@@ -4,36 +4,40 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>À propos · IdIvry</title>
+<meta name="description" content="IdIvry : astuces et solutions simples pour le quotidien.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="about">
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html">IdIvry</a>
+    <a class="logo" href="index.html">IdIvry<small>astuces du quotidien</small></a>
     <nav aria-label="Navigation principale">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="musique.html">Musique</a></li>
+        <li><a href="astuces.html">Astuces</a></li>
         <li><a href="lecture.html">Lecture</a></li>
-        <li><a href="image.html">Images</a></li>
-        <li><a href="shopping.html">Shopping</a></li>
         <li><a href="apropos.html" aria-current="page">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-<main class="page">
-  <div class="wrap">
+<main>
+  <div class="page"><div class="wrap">
     <h1>À propos</h1>
-    <div class="about">
-      <p>IdIvry est un petit coin du web pour voyager, écouter de la musique et garder ses découvertes au même endroit.</p>
-      <p>Remplacez ce texte par votre présentation.</p>
+    <div class="prose">
+      <p>IdIvry rassemble des astuces et des solutions simples pour les petits problèmes du quotidien.</p>
+      <p>Remplacez ce texte par votre histoire : qui vous êtes et pourquoi vous partagez ces astuces.</p>
     </div>
-  </div>
+    <div class="pillars">
+      <div><h3>Court et clair</h3><p>Des étapes numérotées, sans jargon.</p></div>
+      <div><h3>Pratique</h3><p>Des solutions qu’on peut appliquer le jour même.</p></div>
+      <div><h3>Ouvert à vos idées</h3><p>Vous avez une astuce ? Envoyez-la depuis la page Contact.</p></div>
+    </div>
+  </div></div>
 </main>
 <footer>
   <div class="wrap">
@@ -41,16 +45,10 @@
     <ul>
       <li><a href="privacy.html">Confidentialité</a></li>
       <li><a href="terms.html">Conditions d’utilisation</a></li>
-      <li><a href="#">TikTok</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Snapchat</a></li>
-      <li><a href="#">Facebook</a></li>
+      <li><a href="contact.html">Proposer une astuce</a></li>
     </ul>
   </div>
 </footer>
-<script>
-document.getElementById("yr").textContent = new Date().getFullYear();
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

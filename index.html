@@ -3,266 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>IdIvry</title>
-<meta name="description" content="IdIvry : voyages, musique, lecture, images et shopping.">
+<title>IdIvry · Astuces du quotidien</title>
+<meta name="description" content="IdIvry : astuces et solutions simples pour le quotidien.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-:root{
-  --bg:#eef1f5; --surface:#fff; --ink:#12203a; --muted:#53627a; --line:#d3dae5;
-  --seine:#17325c; --lamp:#e8a33d; --lamp-ink:#2a1c00;
-  --display:"Bricolage Grotesque","Trebuchet MS",system-ui,sans-serif;
-  --body:"Figtree",system-ui,-apple-system,"Segoe UI",sans-serif;
-}
-@media (prefers-color-scheme:dark){
-  :root{--bg:#0f1830; --surface:#16233f; --ink:#eaeff8; --muted:#9db0cc; --line:#2b3b5e; --seine:#0b1224;}
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:64px}
-body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
-a{color:inherit}
-:focus-visible{outline:3px solid var(--lamp);outline-offset:2px}
-.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
-
-header.top{position:sticky;top:0;z-index:10;background:var(--seine);color:#fff}
-header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:56px}
-.logo{font:800 1.35rem var(--display);text-decoration:none;letter-spacing:-.01em}
-nav ul{display:flex;gap:4px;list-style:none;margin:0;padding:0;overflow-x:auto}
-nav a{display:block;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:500;font-size:.95rem;white-space:nowrap;color:#dbe5f6}
-nav a:hover{background:rgba(255,255,255,.12);color:#fff}
-
-.hero{position:relative;color:#fff;background:var(--seine) url("eiffel-tower-paris-beautiful-view-wallpaper-80284_w635.webp") center 30%/cover}
-.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,18,36,.55),rgba(11,18,36,.85))}
-.hero .wrap{position:relative;padding-top:64px;padding-bottom:56px}
-.hero h1{font:800 clamp(2.4rem,7vw,4.5rem)/1.02 var(--display);letter-spacing:-.03em;margin:0 0 12px;max-width:14ch}
-.hero p.lead{margin:0 0 32px;max-width:46ch;color:#d6e0f2;font-size:1.15rem}
-
-.finder{background:var(--surface);color:var(--ink);border-radius:14px;padding:20px;box-shadow:0 18px 40px rgba(0,0,0,.35);max-width:760px}
-.tabs{display:flex;gap:6px;margin-bottom:16px;border-bottom:1px solid var(--line)}
-.tabs button{font:600 1rem var(--body);background:none;border:0;border-bottom:3px solid transparent;color:var(--muted);padding:10px 14px;cursor:pointer;margin-bottom:-1px}
-.tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--lamp)}
-.fields{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
-label{display:block;font-weight:600;font-size:.9rem;margin-bottom:4px}
-input[type=text],input[type=date]{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink)}
-.btn{font:700 1rem var(--body);background:var(--lamp);color:var(--lamp-ink);border:0;border-radius:8px;padding:12px 20px;cursor:pointer;margin-top:16px}
-.btn:hover{filter:brightness(1.07)}
-.hint{margin:10px 0 0;font-size:.875rem;color:var(--muted)}
-
-section.block{padding:64px 0 0}
-section.block h2{font:800 clamp(1.7rem,4vw,2.3rem)/1.1 var(--display);letter-spacing:-.02em;margin:0 0 8px}
-section.block>.wrap>p.sub{margin:0 0 24px;color:var(--muted);max-width:56ch}
-
-.player{background:var(--seine);color:#fff;border-radius:14px;padding:22px;display:grid;gap:16px;max-width:620px}
-.player .now{font:700 1.25rem var(--display);min-height:1.6em}
-.player audio{width:100%}
-.ctrl{display:flex;flex-wrap:wrap;gap:8px}
-.ctrl button{font:600 .95rem var(--body);background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:9px 14px;cursor:pointer}
-.ctrl button:hover{background:rgba(255,255,255,.22)}
-.player .msg{margin:0;font-size:.9rem;color:#f5c97c}
-
-.three{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
-.three article{border-top:3px solid var(--lamp);padding-top:14px}
-.three h3{font:700 1.3rem var(--display);margin:0 0 6px}
-.three p{margin:0;color:var(--muted)}
-
-.about{display:grid;gap:12px;max-width:62ch}
-.about p{margin:0}
-
-form.contact{display:grid;gap:14px;max-width:520px}
-form.contact textarea{width:100%;font:inherit;padding:11px 12px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);min-height:120px}
-form.contact input{background:var(--surface)}
-
-footer{margin-top:80px;background:var(--seine);color:#c9d6ee}
-footer .wrap{padding-top:28px;padding-bottom:28px;display:flex;flex-wrap:wrap;gap:16px 28px;justify-content:space-between;align-items:center}
-footer ul{display:flex;flex-wrap:wrap;gap:6px 20px;list-style:none;margin:0;padding:0}
-footer a{text-decoration:none}
-footer a:hover{text-decoration:underline}
-@media (max-width:720px){header.top .wrap{flex-direction:column;align-items:flex-start;padding-top:8px;padding-bottom:6px;gap:2px}.hero .wrap{padding-top:40px}}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="home">
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="#accueil">IdIvry</a>
+    <a class="logo" href="index.html">IdIvry<small>astuces du quotidien</small></a>
     <nav aria-label="Navigation principale">
       <ul>
-        <li><a href="#accueil">Accueil</a></li>
-        <li><a href="#musique">Musique</a></li>
-        <li><a href="#decouvrir">Lecture, images, shopping</a></li>
-        <li><a href="#apropos">À propos</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html" aria-current="page">Accueil</a></li>
+        <li><a href="astuces.html">Astuces</a></li>
+        <li><a href="lecture.html">Lecture</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-
-<main id="accueil">
-  <div class="hero">
-    <div class="wrap">
-      <h1>Où partez-vous ensuite ?</h1>
-      <p class="lead">Cherchez un vol, un bateau ou un hôtel en quelques secondes.</p>
-
-      <div class="finder">
-        <div class="tabs" role="tablist" aria-label="Type de recherche">
-          <button role="tab" id="t-vol" aria-selected="true" data-mode="vol">Vols</button>
-          <button role="tab" id="t-bateau" aria-selected="false" data-mode="bateau">Bateaux</button>
-          <button role="tab" id="t-hotel" aria-selected="false" data-mode="hotel">Hôtels</button>
-        </div>
-        <form id="finder" role="tabpanel">
-          <div class="fields">
-            <div id="f-from"><label for="from">De</label><input type="text" id="from" placeholder="Paris" autocomplete="off"></div>
-            <div><label for="to" id="to-label">Vers</label><input type="text" id="to" placeholder="Lisbonne" required autocomplete="off"></div>
-            <div><label for="d1" id="d1-label">Date de départ</label><input type="date" id="d1" required></div>
-            <div id="f-d2" hidden><label for="d2">Date de départ de l’hôtel</label><input type="date" id="d2"></div>
-          </div>
-          <button class="btn" type="submit">Rechercher des vols</button>
-          <p class="hint">La recherche s’ouvre dans un nouvel onglet.</p>
-        </form>
-      </div>
-    </div>
+<div class="hero">
+  <div class="wrap">
+    <h1>Les petites solutions qui simplifient le quotidien</h1>
+    <p>Des astuces courtes, étape par étape, pour la maison, la cuisine, le budget et le numérique.</p>
+    <form class="search" action="astuces.html" method="get" role="search">
+      <input type="search" name="q" placeholder="Que voulez-vous résoudre ? Ex. : frigo, mot de passe" aria-label="Rechercher une astuce">
+      <button class="btn" type="submit">Chercher</button>
+    </form>
   </div>
-
-  <section class="block" id="musique">
-    <div class="wrap">
-      <h2>Musique</h2>
-      <p class="sub">Votre sélection, en lecture ou en mode aléatoire.</p>
-      <div class="player">
-        <div class="now" id="now" aria-live="polite">Aucun morceau</div>
-        <audio id="audio" controls preload="none"></audio>
-        <div class="ctrl">
-          <button type="button" id="prev">Précédent</button>
-          <button type="button" id="play">Lecture</button>
-          <button type="button" id="next">Suivant</button>
-          <button type="button" id="shuffle">Aléatoire</button>
-        </div>
-        <p class="msg" id="msg" hidden>Fichier introuvable. Ajoutez vos MP3 à côté de index.html et listez-les dans la variable « pistes ».</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="decouvrir">
-    <div class="wrap">
-      <h2>À découvrir</h2>
-      <p class="sub">Trois espaces à remplir avec vos propres contenus.</p>
-      <div class="three">
-        <article id="lecture"><h3>Lecture</h3><p>Vos articles, livres et idées du moment.</p></article>
-        <article id="image"><h3>Images</h3><p>Photos et créations, à regrouper ici.</p></article>
-        <article id="shopping"><h3>Shopping</h3><p>Vos sélections et bons plans.</p></article>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="apropos">
-    <div class="wrap">
-      <h2>À propos</h2>
-      <div class="about">
-        <p>IdIvry est un petit coin du web pour voyager, écouter de la musique et garder ses découvertes au même endroit.</p>
-        <p>Remplacez ce texte par votre présentation.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="block" id="contact">
-    <div class="wrap">
-      <h2>Contact</h2>
-      <p class="sub">Votre message s’ouvre dans votre application de messagerie.</p>
-      <form class="contact" id="contactForm">
-        <div><label for="name">Nom</label><input type="text" id="name" required></div>
-        <div><label for="msgtxt">Message</label><textarea id="msgtxt" required></textarea></div>
-        <div><button class="btn" type="submit" style="margin-top:0">Envoyer le message</button></div>
-      </form>
-    </div>
-  </section>
+</div>
+<main>
+  <section class="sec"><div class="wrap">
+    <h2>Parcourir par thème</h2>
+    <p class="sub">Choisissez le domaine qui vous intéresse.</p>
+    <ul class="chips">
+      <li><a class="chip" data-cat="Maison" href="astuces.html?cat=Maison">Maison</a></li>
+      <li><a class="chip" data-cat="Cuisine" href="astuces.html?cat=Cuisine">Cuisine</a></li>
+      <li><a class="chip" data-cat="Argent" href="astuces.html?cat=Argent">Argent</a></li>
+      <li><a class="chip" data-cat="Numérique" href="astuces.html?cat=Numérique">Numérique</a></li>
+    </ul>
+  </div></section>
+  <section class="sec"><div class="wrap">
+    <h2>Dernières astuces</h2>
+    <p class="sub">Les plus récentes, prêtes à appliquer.</p>
+    <div class="grid" id="latest"></div>
+    <p style="margin-top:22px"><a class="btn" href="astuces.html">Voir toutes les astuces</a></p>
+  </div></section>
 </main>
-
 <footer>
   <div class="wrap">
     <span>© <span id="yr"></span> IdIvry</span>
     <ul>
       <li><a href="privacy.html">Confidentialité</a></li>
       <li><a href="terms.html">Conditions d’utilisation</a></li>
-      <li><a href="#">TikTok</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Snapchat</a></li>
-      <li><a href="#">Facebook</a></li>
+      <li><a href="contact.html">Proposer une astuce</a></li>
     </ul>
   </div>
 </footer>
-
-<script>
-/* ---- Recherche de billets ---- */
-const MODES = {
-  vol:    {btn:"Rechercher des vols",    from:true,  to:"Vers",  d1:"Date de départ",    d2:false, ph:["Paris","Lisbonne"]},
-  bateau: {btn:"Rechercher des bateaux", from:true,  to:"Vers",  d1:"Date de départ",    d2:false, ph:["Marseille","Ajaccio"]},
-  hotel:  {btn:"Rechercher des hôtels",  from:false, to:"Lieu",  d1:"Date d’arrivée",    d2:true,  ph:["","Rome"]}
-};
-let mode = "vol";
-const $ = id => document.getElementById(id);
-document.querySelectorAll(".tabs button").forEach(b => b.addEventListener("click", () => {
-  mode = b.dataset.mode;
-  document.querySelectorAll(".tabs button").forEach(x => x.setAttribute("aria-selected", x === b));
-  const m = MODES[mode];
-  document.querySelector("#finder .btn").textContent = m.btn;
-  $("f-from").hidden = !m.from;
-  $("f-d2").hidden = !m.d2;
-  $("d2").required = m.d2;
-  $("to-label").textContent = m.to;
-  $("d1-label").textContent = m.d1;
-  $("from").placeholder = m.ph[0];
-  $("to").placeholder = m.ph[1];
-}));
-$("finder").addEventListener("submit", e => {
-  e.preventDefault();
-  const from = $("from").value.trim(), to = $("to").value.trim(), d1 = $("d1").value, d2 = $("d2").value;
-  const q = encodeURIComponent;
-  let url;
-  if (mode === "vol") {
-    url = "https://www.google.com/travel/flights?q=" + q(`Vols de ${from || "Paris"} à ${to} le ${d1}`);
-  } else if (mode === "bateau") {
-    url = "https://www.google.com/search?q=" + q(`ferry ${from || "Marseille"} ${to} ${d1}`);
-  } else {
-    url = `https://www.booking.com/searchresults.fr.html?ss=${q(to)}&checkin=${d1}&checkout=${d2}`;
-  }
-  window.open(url, "_blank", "noopener");
-});
-const today = new Date().toISOString().slice(0, 10);
-$("d1").min = today; $("d2").min = today;
-$("d1").addEventListener("change", () => { $("d2").min = $("d1").value || today; });
-
-/* ---- Lecteur de musique ---- */
-const pistes = ["audio1.mp3", "audio2.mp3", "audio3.mp3"]; // ajoutez vos fichiers MP3 ici
-let i = 0;
-const audio = $("audio");
-function charger(n, lire) {
-  i = (n + pistes.length) % pistes.length;
-  audio.src = pistes[i];
-  $("now").textContent = pistes[i].replace(/\.mp3$/i, "");
-  $("msg").hidden = true;
-  if (lire) audio.play().catch(() => {});
-}
-$("play").addEventListener("click", () => {
-  if (!audio.src) charger(0, false);
-  audio.paused ? audio.play().catch(() => {}) : audio.pause();
-});
-audio.addEventListener("play",  () => $("play").textContent = "Pause");
-audio.addEventListener("pause", () => $("play").textContent = "Lecture");
-audio.addEventListener("ended", () => charger(i + 1, true));
-audio.addEventListener("error", () => { $("msg").hidden = false; });
-$("prev").addEventListener("click", () => charger(i - 1, true));
-$("next").addEventListener("click", () => charger(i + 1, true));
-$("shuffle").addEventListener("click", () => charger(Math.floor(Math.random() * pistes.length), true));
-charger(0, false);
-
-/* ---- Contact ---- */
-$("contactForm").addEventListener("submit", e => {
-  e.preventDefault();
-  const subject = encodeURIComponent("Message de " + $("name").value);
-  const body = encodeURIComponent($("msgtxt").value);
-  location.href = `mailto:chmoud82@gmail.com?subject=${subject}&body=${body}`;
-});
-$("yr").textContent = new Date().getFullYear();
-</script>
+<script src="script.js"></script>
 </body>
 </html>

@@ -4,38 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Lecture · IdIvry</title>
+<meta name="description" content="IdIvry : astuces et solutions simples pour le quotidien.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="read">
 <header class="top">
   <div class="wrap">
-    <a class="logo" href="index.html">IdIvry</a>
+    <a class="logo" href="index.html">IdIvry<small>astuces du quotidien</small></a>
     <nav aria-label="Navigation principale">
       <ul>
         <li><a href="index.html">Accueil</a></li>
-        <li><a href="musique.html">Musique</a></li>
+        <li><a href="astuces.html">Astuces</a></li>
         <li><a href="lecture.html" aria-current="page">Lecture</a></li>
-        <li><a href="image.html">Images</a></li>
-        <li><a href="shopping.html">Shopping</a></li>
         <li><a href="apropos.html">À propos</a></li>
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
   </div>
 </header>
-<main class="page">
-  <div class="wrap">
+<main>
+  <div class="page"><div class="wrap">
     <h1>Lecture</h1>
-    <p class="sub">Vos articles, livres et idées du moment.</p>
-    <div class="three">
-      <article class="card"><h3>Titre du livre ou de l’article</h3><p>Écrivez ici pourquoi vous le recommandez.</p></article>
-      <article class="card"><h3>Deuxième lecture</h3><p>Remplacez ce texte par votre avis en deux phrases.</p></article>
-      <article class="card"><h3>Troisième lecture</h3><p>Ajoutez autant de cartes que vous voulez.</p></article>
-    </div>
-  </div>
+    <p class="sub">Des guides un peu plus longs, à lire tranquillement.</p>
+    <details class="guide" open><summary>Un budget simple en trois enveloppes</summary><div class="body">
+      <p>Pas besoin d’un tableur compliqué. La méthode 50/30/20 répartit vos revenus nets en trois parts.</p>
+      <h4>50 % pour les besoins</h4><p>Loyer, courses, transports, factures : ce qu’il faut payer pour vivre.</p>
+      <h4>30 % pour les envies</h4><p>Sorties, loisirs, abonnements, cadeaux : ce qui fait plaisir.</p>
+      <h4>20 % pour l’épargne</h4><p>Mettez cette part de côté en premier, dès que vous êtes payé, ou servez-vous-en pour rembourser une dette.</p>
+      <p>Ces pourcentages sont un repère : ajustez-les à votre situation.</p>
+    </div></details>
+    <details class="guide"><summary>Préparer sa semaine en 15 minutes</summary><div class="body">
+      <h4>1. Regardez l’agenda (3 min)</h4><p>Notez les rendez-vous et les soirées déjà prises.</p>
+      <h4>2. Choisissez trois priorités (5 min)</h4><p>Pas dix : trois choses qui comptent vraiment cette semaine.</p>
+      <h4>3. Planifiez les repas (5 min)</h4><p>Prévoyez les dîners et faites la liste de courses en même temps.</p>
+      <h4>4. Préparez une chose pour demain (2 min)</h4><p>Un sac prêt, un vêtement sorti : le lundi commence mieux.</p>
+    </div></details>
+  </div></div>
 </main>
 <footer>
   <div class="wrap">
@@ -43,16 +50,10 @@
     <ul>
       <li><a href="privacy.html">Confidentialité</a></li>
       <li><a href="terms.html">Conditions d’utilisation</a></li>
-      <li><a href="#">TikTok</a></li>
-      <li><a href="#">Instagram</a></li>
-      <li><a href="#">Snapchat</a></li>
-      <li><a href="#">Facebook</a></li>
+      <li><a href="contact.html">Proposer une astuce</a></li>
     </ul>
   </div>
 </footer>
-<script>
-document.getElementById("yr").textContent = new Date().getFullYear();
-
-</script>
+<script src="script.js"></script>
 </body>
 </html>

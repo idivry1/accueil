@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Astuces · IdIvry</title>
+<meta name="description" content="IdIvry : astuces et solutions simples pour le quotidien.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@500;700&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-page="tips">
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="index.html">IdIvry<small>astuces du quotidien</small></a>
+    <nav aria-label="Navigation principale">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="astuces.html" aria-current="page">Astuces</a></li>
+        <li><a href="lecture.html">Lecture</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="page"><div class="wrap">
+    <h1>Astuces</h1>
+    <p class="sub">Cherchez par mot-clé ou filtrez par thème.</p>
+    <div class="filter"><input type="search" id="q" placeholder="Rechercher une astuce" aria-label="Rechercher une astuce"></div>
+    <ul class="chips" id="chips"></ul>
+    <p class="count" id="count" aria-live="polite"></p>
+    <div class="grid" id="list"></div>
+  </div></div>
+</main>
+<footer>
+  <div class="wrap">
+    <span>© <span id="yr"></span> IdIvry</span>
+    <ul>
+      <li><a href="privacy.html">Confidentialité</a></li>
+      <li><a href="terms.html">Conditions d’utilisation</a></li>
+      <li><a href="contact.html">Proposer une astuce</a></li>
+    </ul>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
